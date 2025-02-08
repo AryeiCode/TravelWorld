@@ -5,6 +5,12 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWorld.Web", "TravelWorld.Web\TravelWorld.Web.csproj", "{1AE9B90A-03EE-4854-85B6-1F0C4A5E5CE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWorld.Domain", "TravelWorld.Domain\TravelWorld.Domain.csproj", "{F1B8F9B0-B068-463F-AC4A-DD671A3FF14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWorld.Application", "TravelWorld.Application\TravelWorld.Application.csproj", "{3AEFF6A5-EA75-4D3A-AA35-EE2FBF3BE8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelWorld.Infrastructure", "TravelWorld.Infrastructure\TravelWorld.Infrastructure.csproj", "{99E0442B-5B00-401F-8347-DDD91979EC3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{1AE9B90A-03EE-4854-85B6-1F0C4A5E5CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AE9B90A-03EE-4854-85B6-1F0C4A5E5CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AE9B90A-03EE-4854-85B6-1F0C4A5E5CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B8F9B0-B068-463F-AC4A-DD671A3FF14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B8F9B0-B068-463F-AC4A-DD671A3FF14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B8F9B0-B068-463F-AC4A-DD671A3FF14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B8F9B0-B068-463F-AC4A-DD671A3FF14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEFF6A5-EA75-4D3A-AA35-EE2FBF3BE8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEFF6A5-EA75-4D3A-AA35-EE2FBF3BE8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEFF6A5-EA75-4D3A-AA35-EE2FBF3BE8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEFF6A5-EA75-4D3A-AA35-EE2FBF3BE8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E0442B-5B00-401F-8347-DDD91979EC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E0442B-5B00-401F-8347-DDD91979EC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E0442B-5B00-401F-8347-DDD91979EC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E0442B-5B00-401F-8347-DDD91979EC3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
