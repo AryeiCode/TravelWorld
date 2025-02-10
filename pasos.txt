@@ -1,0 +1,31 @@
+CLEAN ARCHITECTURE
+
+1. Crear proyectos 
+- NombreProyecto.Web
+- NombreProyecto.Domain
+- NombreProyecto.Application
+- NombreProyecto.Infrastructure 
+
+1. Crear subcarptetas en cada proyecto
+- NombreProyecto.Domain
+	- Entities : Agregar las entidades o tablas de la bd
+
+2. Crear conexión a bd en el proyecto Web y Infrastructure 
+- Instalar paquetes de EF
+	* SqlServer
+	* Design
+	* Tools
+- Crear subcarpeta Data en Infrastructure
+	* Crear el dbContext y la cadena de conexión
+	
+3. Migración (Siempre se modifica, pero no se toca la carpeta de migración)
+- creación bd: update-databse (Proyecto Web)
+- Se agrega DbSet: add-migration "mensaje" (Proyecto Infrastructure).
+
+4.Crear controlador y agregar el contexto de bd
+- Crear vista seleccioando el nombre del Metodo (Siempre se debe crear una subcarpeta por controlador.
+- Llamar el modelo en la vista con @model (Lista o Entidad)
+
+5.Crear validaciones tanto del lado del servidor como del cliente
+- Crear el metodo get y post para realizar el UPSERT
+- Crear el motodo para eliminar con ayuda de Ajax.

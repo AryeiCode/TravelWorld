@@ -1,0 +1,83 @@
+﻿@model IEnumerable<CountryHouse>
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-black bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Listado de Casas Campestres</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body border p-4">
+        <div class="row pb-3">
+            <div class="col-6 offset-6 text-end">
+                <a asp-controller="CountryHouse" asp-action="Upsert" class="btn btn-secondary">
+                    Crear Nuevo <i class="bi bi-plus-circle"></i>
+                </a>
+            </div>
+        </div>
+        @if(Model.Count() > 0)
+        {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Metros Cuadrados</th>
+                    <th>Ocupación</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var obj in Model){
+                    <tr>
+                        <td>@obj.Name</td>
+                        <td>@obj.Price</td>
+                        <td>@obj.Sqft</td>
+                        <td>@obj.Occupancy</td>
+                        <td>
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-controller="CountryHouse" asp-action="Upsert" asp-route-countryHouseId="@obj.Id"
+                                class="btn btn-info mx-2">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a class="btn btn-danger mx-2" onclick="deleteConfirm(@obj.Id)">
+                                    <i class="bi bi-trash-fill"></i>
+                                </a>
+                               
+                                </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+ </table>
+        }
+        else{
+            <h2>No se encontraron elementos</h2>
+        }
+</div>
+</div>
+
+@section Scripts{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function deleteConfirm(id){
+           let res = confirm(`¿Estas seguro que deseas eliminar el registro ${id}?`);
+           if(res === false) return
+             $.ajax({
+            url: '@Url.Action("Delete", "CountryHouse")',
+            type: 'POST',
+            data: { countryHouseId: id, res: res }
+            /*success: function (response) {
+                // Actualizar la vista con la respuesta del servidor
+                document.getElementById("result").innerText = response.message;
+            },
+            error: function () {
+                alert("An error occurred while sending the value.");
+            }*/
+        });
+        }
+       
+    </script>
+
+}
